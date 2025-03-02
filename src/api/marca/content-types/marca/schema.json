@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marcas",
+  "info": {
+    "singularName": "marca",
+    "pluralName": "marcas",
+    "displayName": "Marcas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "pais_origen": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

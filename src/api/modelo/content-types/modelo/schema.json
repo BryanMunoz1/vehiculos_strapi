@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modelos",
+  "info": {
+    "singularName": "modelo",
+    "pluralName": "modelos",
+    "displayName": "Modelos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "anio_lanzamiento": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

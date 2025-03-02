@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "versiones",
+  "info": {
+    "singularName": "versione",
+    "pluralName": "versiones",
+    "displayName": "Versiones"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "motor": {
+      "type": "string",
+      "required": true
+    },
+    "transmision": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
