@@ -386,6 +386,7 @@ export interface ApiMarcaMarca extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::marca.marca'> &
       Schema.Attribute.Private;
+    modelo: Schema.Attribute.Relation<'manyToOne', 'api::modelo.modelo'>;
     nombre: Schema.Attribute.String & Schema.Attribute.Required;
     pais_origen: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
@@ -398,6 +399,7 @@ export interface ApiMarcaMarca extends Struct.CollectionTypeSchema {
 export interface ApiModeloModelo extends Struct.CollectionTypeSchema {
   collectionName: 'modelos';
   info: {
+    description: '';
     displayName: 'Modelos';
     pluralName: 'modelos';
     singularName: 'modelo';
@@ -416,17 +418,20 @@ export interface ApiModeloModelo extends Struct.CollectionTypeSchema {
       'api::modelo.modelo'
     > &
       Schema.Attribute.Private;
+    marcas: Schema.Attribute.Relation<'oneToMany', 'api::marca.marca'>;
     nombre: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    versione: Schema.Attribute.Relation<'manyToOne', 'api::versione.versione'>;
   };
 }
 
 export interface ApiVersioneVersione extends Struct.CollectionTypeSchema {
   collectionName: 'versiones';
   info: {
+    description: '';
     displayName: 'Versiones';
     pluralName: 'versiones';
     singularName: 'versione';
@@ -444,6 +449,7 @@ export interface ApiVersioneVersione extends Struct.CollectionTypeSchema {
       'api::versione.versione'
     > &
       Schema.Attribute.Private;
+    modelos: Schema.Attribute.Relation<'oneToMany', 'api::modelo.modelo'>;
     motor: Schema.Attribute.String & Schema.Attribute.Required;
     nombre: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;

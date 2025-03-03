@@ -17,6 +17,12 @@
     "pais_origen": {
       "type": "string",
       "required": true
+    },
+    "modelo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::modelo.modelo",
+      "inversedBy": "marcas"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "versione",
     "pluralName": "versiones",
-    "displayName": "Versiones"
+    "displayName": "Versiones",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,6 +22,12 @@
     "transmision": {
       "type": "string",
       "required": true
+    },
+    "modelos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::modelo.modelo",
+      "mappedBy": "versione"
     }
   }
 }
