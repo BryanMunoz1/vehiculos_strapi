@@ -19,18 +19,17 @@
       "type": "integer",
       "required": true
     },
-    "marca": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::marca.marca",
-      "inversedBy": "modelos",
-      "required": true
-    },
-    "versiones": {
+    "marcas": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::version.version",
+      "target": "api::marca.marca",
       "mappedBy": "modelo"
+    },
+    "versione": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::versione.versione",
+      "inversedBy": "modelos"
     }
   }
 }

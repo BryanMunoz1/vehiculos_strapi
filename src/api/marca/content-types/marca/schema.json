@@ -4,8 +4,7 @@
   "info": {
     "singularName": "marca",
     "pluralName": "marcas",
-    "displayName": "Marcas",
-    "description": ""
+    "displayName": "Marcas"
   },
   "options": {
     "draftAndPublish": true
@@ -13,18 +12,17 @@
   "attributes": {
     "nombre": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     },
     "pais_origen": {
       "type": "string",
       "required": true
     },
-    "modelos": {
+    "modelo": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::modelo.modelo",
-      "mappedBy": "marca"
+      "inversedBy": "marcas"
     }
   }
 }

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "versiones",
   "info": {
-    "singularName": "version",
+    "singularName": "versione",
     "pluralName": "versiones",
     "displayName": "Versiones",
     "description": ""
@@ -23,12 +23,11 @@
       "type": "string",
       "required": true
     },
-    "modelo": {
+    "modelos": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::modelo.modelo",
-      "inversedBy": "versiones",
-      "required": true
+      "mappedBy": "versione"
     }
   }
 }
