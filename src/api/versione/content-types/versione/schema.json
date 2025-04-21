@@ -23,11 +23,11 @@
       "type": "string",
       "required": true
     },
-    "modelos": {
+    "modelo": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::modelo.modelo",
-      "mappedBy": "versione"
+      "inversedBy": "versiones"
     }
   }
 }

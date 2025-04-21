@@ -1,15 +1,8 @@
-/**
- * modelo controller
- */
-
 import { factories } from '@strapi/strapi'
-
 export default factories.createCoreController('api::modelo.modelo');
 
 'use strict';
-
 const { createCoreController } = require('@strapi/strapi').factories;
-
 module.exports = createCoreController('api::modelo.modelo', ({ strapi }) => ({
   // Sobrescribe el método delete
   async delete(ctx) {
